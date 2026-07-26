@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shakib Mozumder — Full-Stack .NET Developer</title>
+<meta name="description" content="Portfolio of Shakib Mozumder, Full-Stack .NET Developer and Software Engineer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV (styled as editor tab bar) ============ -->
+<header class="tabbar" id="tabbar">
+  <div class="tabbar__inner">
+    <div class="tabbar__brand">
+      <!-- EDIT: replace assets/profile.svg with your own small photo -->
+      <img src="assets/profile.svg" alt="" class="brand__avatar" aria-hidden="true">
+      <!-- EDIT: replace with your name -->
+      <span class="brand__name">shakib-mozumder</span>
+    </div>
+
+    <nav class="tabs" id="tabs">
+      <a href="#home" class="tab tab--icon active" aria-label="Home" style="--tab-color:#38BDF8;--tab-glow:rgba(56,189,248,0.55)" data-color="#38BDF8" data-glow="rgba(56,189,248,0.5)"><i class="fa-solid fa-house"></i><span class="tab__name tab__name--home">Home</span></a>
+      <a href="#about" class="tab" style="--tab-color:#E8B75E;--tab-glow:rgba(232,183,94,0.55)" data-color="#E8B75E" data-glow="rgba(232,183,94,0.5)"><span class="tab__dot"></span><span class="tab__name">about</span></a>
+      <a href="#skills" class="tab" style="--tab-color:#4FD1C5;--tab-glow:rgba(79,209,197,0.55)" data-color="#4FD1C5" data-glow="rgba(79,209,197,0.5)"><span class="tab__dot"></span><span class="tab__name">skills</span></a>
+      <a href="#education" class="tab" style="--tab-color:#8B5CF6;--tab-glow:rgba(139,92,246,0.55)" data-color="#8B5CF6" data-glow="rgba(139,92,246,0.5)"><span class="tab__dot"></span><span class="tab__name">education</span></a>
+      <a href="#projects" class="tab" style="--tab-color:#FB923C;--tab-glow:rgba(251,146,60,0.55)" data-color="#FB923C" data-glow="rgba(251,146,60,0.5)"><span class="tab__dot"></span><span class="tab__name">projects</span></a>
+      <a href="#contact" class="tab" style="--tab-color:#34D399;--tab-glow:rgba(52,211,153,0.55)" data-color="#34D399" data-glow="rgba(52,211,153,0.5)"><span class="tab__dot"></span><span class="tab__name">contact</span></a>
+      <div class="tab-indicator" id="tabIndicator"></div>
+    </nav>
+
+    <a href="#contact" class="tabbar__cta">Hire Me</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <div class="hero__text">
+      <!-- EDIT: replace with your own name -->
+      <p class="hero__greeting">Hello, I'm</p>
+      <h1 class="hero__title">Shakib<br>Mozumder</h1>
+      <p class="eyebrow"><i class="fa-solid fa-code eyebrow__icon"></i><i class="eyebrow__pulse"></i>full-stack <span class="eyebrow__hl">.net</span> developer</p>
+      <!-- EDIT: replace with your own tagline/summary -->
+      <p class="hero__desc">
+        I build reliable, scalable web applications end-to-end — clean ASP.NET
+        Core APIs on the back-end, polished React interfaces on the front. As a
+        Computer Science &amp; Engineering graduate, I bring a strong grounding
+        in data structures, algorithms, software architecture, and machine
+        learning to every project I ship.
+      </p>
+
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <!-- EDIT: replace resume.pdf with your actual resume file inside assets/ -->
+        <a href="assets/resume.pdf" class="btn btn--ghost" download>Download Résumé</a>
+      </div>
+
+      <div class="hero__social">
+        <!-- EDIT: replace # with your real profile links, and the mailto address below -->
+        <a href="#" aria-label="GitHub" class="social-icon" style="--icon-color:#E5E7EB;--icon-glow:rgba(229,231,235,0.5)"><i class="fa-brands fa-github"></i><span class="social-icon__tip">GitHub</span></a>
+        <a href="#" aria-label="LinkedIn" class="social-icon" style="--icon-color:#0A66C2;--icon-glow:rgba(10,102,194,0.5)"><i class="fa-brands fa-linkedin-in"></i><span class="social-icon__tip">LinkedIn</span></a>
+        <a href="#" aria-label="Twitter / X" class="social-icon" style="--icon-color:#1DA1F2;--icon-glow:rgba(29,161,242,0.5)"><i class="fa-brands fa-x-twitter"></i><span class="social-icon__tip">Twitter / X</span></a>
+        <a href="#" aria-label="Facebook" class="social-icon" style="--icon-color:#1877F2;--icon-glow:rgba(24,119,242,0.5)"><i class="fa-brands fa-facebook-f"></i><span class="social-icon__tip">Facebook</span></a>
+        <a href="#" aria-label="Instagram" class="social-icon social-icon--instagram" style="--icon-color:#E1306C;--icon-glow:rgba(225,48,108,0.5)"><i class="fa-brands fa-instagram"></i><span class="social-icon__tip">Instagram</span></a>
+        <a href="mailto:shakib.mozumder@example.com" aria-label="Email" class="social-icon" style="--icon-color:#EA4335;--icon-glow:rgba(234,67,53,0.5)"><i class="fa-solid fa-envelope"></i><span class="social-icon__tip">Gmail</span></a>
+      </div>
+    </div>
+
+    <!-- Signature element: engineering "title block" -->
+    <div class="titleblock">
+      <div class="titleblock__photo">
+        <div class="titleblock__photo-inner">
+          <!-- EDIT: replace assets/profile.svg with your own photo (jpg/png) -->
+          <img src="assets/profile.svg" alt="Portrait of Shakib Mozumder">
+        </div>
+        <span class="titleblock__badge" aria-hidden="true">&lt;/&gt;</span>
+      </div>
+      <div class="titleblock__row">
+        <span class="titleblock__label">Name</span>
+        <span class="titleblock__value" style="color:var(--accent); font-weight:700;">Shakib Mozumder</span>
+      </div>
+      <div class="titleblock__row">
+        <span class="titleblock__label">Discipline</span>
+        <span class="titleblock__value">Software Engineering</span>
+      </div>
+      <div class="titleblock__row">
+        <span class="titleblock__label">Stack</span>
+        <span class="titleblock__value">.NET / React / SQL</span>
+      </div>
+      <div class="titleblock__row">
+        <span class="titleblock__label">Based in</span>
+        <!-- EDIT: replace with your city/country -->
+        <span class="titleblock__value">Dhaka, Bangladesh</span>
+      </div>
+      <div class="titleblock__row">
+        <span class="titleblock__label">Status</span>
+        <span class="titleblock__value titleblock__status"><i></i>Available for hire</span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+</section>
+
+<main>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <div class="section__inner">
+    <h2 class="section__title"><span style="color:#E8B75E">About</span> Me</h2>
+
+    <div class="about__grid">
+      <div class="about__copy">
+        <!-- EDIT: replace this paragraph with your own bio -->
+        <p>
+          I'm a Computer Science &amp; Engineering graduate from
+          <strong>American International University-Bangladesh (AIUB)</strong>,
+          majoring in <strong>Software Engineering</strong> with coursework in
+          <strong>Advanced .NET</strong>, <strong>Advanced Web Technologies</strong>,
+          and <strong>Software Architecture &amp; Design Patterns</strong>. Backed
+          by a strong foundation in <strong>data structures, algorithms, and
+          problem-solving</strong>, I build full-stack web applications end to
+          end — designing clean database schemas, writing well-structured
+          APIs, and shipping interfaces people enjoy using.
+        </p>
+        <p>
+          Alongside my major, I took electives in <strong>Machine Learning</strong>
+          and <strong>Natural Language Processing</strong>, where I picked up
+          <strong> Python</strong> as part of the coursework. My background spans
+          classic systems programming (C, C++, Java) through modern web
+          development (JavaScript, PHP) to enterprise-grade <strong>.NET</strong>
+          application architecture — I care about writing code that's easy to
+          read, easy to test, and easy to change.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="section section--panel">
+  <div class="section__inner">
+    <h2 class="section__title"><span style="color:#4FD1C5">Technical</span> Skills</h2>
+
+    <div class="skills__grid">
+
+      <div class="skill-card">
+        <h3 class="skill-card__title">Languages</h3>
+        <div class="chips">
+          <span class="chip" style="--chip-color:#A8B9CC;--chip-bg:rgba(168,185,204,0.16);--chip-border:rgba(168,185,204,0.45);--chip-glow:rgba(168,185,204,0.55)"><i class="devicon-c-plain chip__icon"></i>C</span>
+          <span class="chip" style="--chip-color:#F34B7D;--chip-bg:rgba(243,75,125,0.16);--chip-border:rgba(243,75,125,0.45);--chip-glow:rgba(243,75,125,0.55)"><i class="devicon-cplusplus-plain chip__icon"></i>C++</span>
+          <span class="chip" style="--chip-color:#E76F00;--chip-bg:rgba(231,111,0,0.16);--chip-border:rgba(231,111,0,0.45);--chip-glow:rgba(231,111,0,0.55)"><i class="devicon-java-plain chip__icon"></i>Java</span>
+          <span class="chip" style="--chip-color:#9B4F96;--chip-bg:rgba(155,79,150,0.16);--chip-border:rgba(155,79,150,0.45);--chip-glow:rgba(155,79,150,0.55)"><i class="devicon-csharp-plain chip__icon"></i>C#</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="skill-card__title">Backend &amp; .NET</h3>
+        <div class="chips">
+          <span class="chip" style="--chip-color:#7C6FF0;--chip-bg:rgba(124,111,240,0.16);--chip-border:rgba(124,111,240,0.45);--chip-glow:rgba(124,111,240,0.55)"><i class="devicon-dotnetcore-plain chip__icon"></i>ASP.NET Core</span>
+          <span class="chip" style="--chip-color:#22D3EE;--chip-bg:rgba(34,211,238,0.16);--chip-border:rgba(34,211,238,0.45);--chip-glow:rgba(34,211,238,0.55)">Web APIs</span>
+          <span class="chip" style="--chip-color:#A78BFA;--chip-bg:rgba(167,139,250,0.16);--chip-border:rgba(167,139,250,0.45);--chip-glow:rgba(167,139,250,0.55)">Entity Framework Core</span>
+          <span class="chip" style="--chip-color:#FBBF24;--chip-bg:rgba(251,191,36,0.16);--chip-border:rgba(251,191,36,0.45);--chip-glow:rgba(251,191,36,0.55)">JWT Auth</span>
+          <span class="chip" style="--chip-color:#94A3B8;--chip-bg:rgba(148,163,184,0.16);--chip-border:rgba(148,163,184,0.45);--chip-glow:rgba(148,163,184,0.55)">Clean Architecture</span>
+          <span class="chip" style="--chip-color:#F472B6;--chip-bg:rgba(244,114,182,0.16);--chip-border:rgba(244,114,182,0.45);--chip-glow:rgba(244,114,182,0.55)">CQRS</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="skill-card__title">Frontend</h3>
+        <div class="chips">
+          <span class="chip" style="--chip-color:#E34C26;--chip-bg:rgba(227,76,38,0.16);--chip-border:rgba(227,76,38,0.45);--chip-glow:rgba(227,76,38,0.55)"><i class="devicon-html5-plain chip__icon"></i>HTML5</span>
+          <span class="chip" style="--chip-color:#7C6FEF;--chip-bg:rgba(124,111,239,0.16);--chip-border:rgba(124,111,239,0.45);--chip-glow:rgba(124,111,239,0.55)"><i class="devicon-css3-plain chip__icon"></i>CSS3</span>
+          <span class="chip" style="--chip-color:#F1E05A;--chip-bg:rgba(241,224,90,0.16);--chip-border:rgba(241,224,90,0.45);--chip-glow:rgba(241,224,90,0.55)"><i class="devicon-javascript-plain chip__icon"></i>JavaScript</span>
+          <span class="chip" style="--chip-color:#61DAFB;--chip-bg:rgba(97,218,251,0.16);--chip-border:rgba(97,218,251,0.45);--chip-glow:rgba(97,218,251,0.55)"><i class="devicon-react-original chip__icon"></i>React</span>
+          <span class="chip" style="--chip-color:#E5E7EB;--chip-bg:rgba(229,231,235,0.16);--chip-border:rgba(229,231,235,0.45);--chip-glow:rgba(229,231,235,0.55)"><i class="devicon-nextjs-original chip__icon"></i>Next.js</span>
+          <span class="chip" style="--chip-color:#8892BF;--chip-bg:rgba(136,146,191,0.16);--chip-border:rgba(136,146,191,0.45);--chip-glow:rgba(136,146,191,0.55)"><i class="devicon-php-plain chip__icon"></i>PHP</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="skill-card__title">Database</h3>
+        <div class="chips">
+          <span class="chip" style="--chip-color:#E15759;--chip-bg:rgba(225,87,89,0.16);--chip-border:rgba(225,87,89,0.45);--chip-glow:rgba(225,87,89,0.55)"><i class="devicon-microsoftsqlserver-plain chip__icon"></i>SQL Server</span>
+          <span class="chip" style="--chip-color:#00A8CC;--chip-bg:rgba(0,168,204,0.16);--chip-border:rgba(0,168,204,0.45);--chip-glow:rgba(0,168,204,0.55)"><i class="devicon-mysql-plain chip__icon"></i>MySQL</span>
+          <span class="chip" style="--chip-color:#4A90D9;--chip-bg:rgba(74,144,217,0.16);--chip-border:rgba(74,144,217,0.45);--chip-glow:rgba(74,144,217,0.55)"><i class="devicon-postgresql-plain chip__icon"></i>PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="skill-card__title">DevOps &amp; Tools</h3>
+        <div class="chips">
+          <span class="chip" style="--chip-color:#2496ED;--chip-bg:rgba(36,150,237,0.16);--chip-border:rgba(36,150,237,0.45);--chip-glow:rgba(36,150,237,0.55)"><i class="devicon-docker-plain chip__icon"></i>Docker</span>
+          <span class="chip" style="--chip-color:#E0554F;--chip-bg:rgba(224,85,79,0.16);--chip-border:rgba(224,85,79,0.45);--chip-glow:rgba(224,85,79,0.55)"><i class="devicon-redis-plain chip__icon"></i>Redis</span>
+          <span class="chip" style="--chip-color:#F05032;--chip-bg:rgba(240,80,50,0.16);--chip-border:rgba(240,80,50,0.45);--chip-glow:rgba(240,80,50,0.55)"><i class="devicon-git-plain chip__icon"></i>Git &amp; GitHub</span>
+          <span class="chip" style="--chip-color:#34D399;--chip-bg:rgba(52,211,153,0.16);--chip-border:rgba(52,211,153,0.45);--chip-glow:rgba(52,211,153,0.55)">CI/CD</span>
+          <span class="chip" style="--chip-color:#8B6FEF;--chip-bg:rgba(139,111,239,0.16);--chip-border:rgba(139,111,239,0.45);--chip-glow:rgba(139,111,239,0.55)">SignalR</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="skill-card__title">AI &amp; Data</h3>
+        <div class="chips">
+          <span class="chip" style="--chip-color:#4B8BBE;--chip-bg:rgba(75,139,190,0.16);--chip-border:rgba(75,139,190,0.45);--chip-glow:rgba(75,139,190,0.55)"><i class="devicon-python-plain chip__icon"></i>Python</span>
+          <span class="chip" style="--chip-color:#FF6F61;--chip-bg:rgba(255,111,97,0.16);--chip-border:rgba(255,111,97,0.45);--chip-glow:rgba(255,111,97,0.55)">Machine Learning</span>
+          <span class="chip" style="--chip-color:#8B5CF6;--chip-bg:rgba(139,92,246,0.16);--chip-border:rgba(139,92,246,0.45);--chip-glow:rgba(139,92,246,0.55)">NLP</span>
+          <span class="chip" style="--chip-color:#FBBF24;--chip-bg:rgba(251,191,36,0.16);--chip-border:rgba(251,191,36,0.45);--chip-glow:rgba(251,191,36,0.55)">Data Structures &amp; Algorithms</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education" class="section">
+  <div class="section__inner">
+    <h2 class="section__title" style="color:#8B5CF6; text-shadow:0 0 28px rgba(139,92,246,0.35)">Education</h2>
+
+    <div class="timeline">
+      <div class="timeline__item">
+        <div class="timeline__content">
+          <!-- EDIT: update graduation year -->
+          <span class="timeline__date"><i class="fa-solid fa-calendar-days"></i> 2022 — 2026</span>
+          <h3>B.Sc. in Computer Science &amp; Engineering</h3>
+          <p class="timeline__org">American International University-Bangladesh (AIUB)</p>
+          <p>148-credit program · Major in Software Engineering · Electives in Machine Learning &amp; Natural Language Processing</p>
+          <div class="chips">
+            <span class="chip chip--ghost" style="--chip-color:#7C6FF0;--chip-bg:rgba(124,111,240,0.16);--chip-border:rgba(124,111,240,0.45);--chip-glow:rgba(124,111,240,0.55)">Advanced Programming with .NET</span>
+            <span class="chip chip--ghost" style="--chip-color:#22D3EE;--chip-bg:rgba(34,211,238,0.16);--chip-border:rgba(34,211,238,0.45);--chip-glow:rgba(34,211,238,0.55)">Advanced Programming in Web Technology</span>
+            <span class="chip chip--ghost" style="--chip-color:#94A3B8;--chip-bg:rgba(148,163,184,0.16);--chip-border:rgba(148,163,184,0.45);--chip-glow:rgba(148,163,184,0.55)">Software Architecture and Design Patterns</span>
+            <span class="chip chip--ghost" style="--chip-color:#FF6F61;--chip-bg:rgba(255,111,97,0.16);--chip-border:rgba(255,111,97,0.45);--chip-glow:rgba(255,111,97,0.55)">Machine Learning</span>
+            <span class="chip chip--ghost" style="--chip-color:#8B5CF6;--chip-bg:rgba(139,92,246,0.16);--chip-border:rgba(139,92,246,0.45);--chip-glow:rgba(139,92,246,0.55)">Natural Language Processing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section section--panel">
+  <div class="section__inner">
+    <h2 class="section__title"><span style="color:#FB923C">Featured</span> Projects</h2>
+
+    <div class="projects__grid">
+
+      <!-- EDIT: replace each project card below with your real projects -->
+      <article class="project-card">
+        <div class="project-card__media">
+          <span class="project-card__index">01</span>
+        </div>
+        <div class="project-card__body">
+          <h3>Project Title One</h3>
+          <p>One or two sentences describing what this project does and the
+            problem it solves.</p>
+          <div class="chips">
+            <span class="chip chip--sm" style="--chip-color:#7C6FF0;--chip-bg:rgba(124,111,240,0.16);--chip-border:rgba(124,111,240,0.45);--chip-glow:rgba(124,111,240,0.55)"><i class="devicon-dotnetcore-plain chip__icon"></i>ASP.NET Core</span>
+            <span class="chip chip--sm" style="--chip-color:#61DAFB;--chip-bg:rgba(97,218,251,0.16);--chip-border:rgba(97,218,251,0.45);--chip-glow:rgba(97,218,251,0.55)"><i class="devicon-react-original chip__icon"></i>React</span>
+            <span class="chip chip--sm" style="--chip-color:#E15759;--chip-bg:rgba(225,87,89,0.16);--chip-border:rgba(225,87,89,0.45);--chip-glow:rgba(225,87,89,0.55)"><i class="devicon-microsoftsqlserver-plain chip__icon"></i>SQL Server</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#">Live Demo →</a>
+            <a href="#">Source Code →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__media">
+          <span class="project-card__index">02</span>
+        </div>
+        <div class="project-card__body">
+          <h3>Project Title Two</h3>
+          <p>One or two sentences describing what this project does and the
+            problem it solves.</p>
+          <div class="chips">
+            <span class="chip chip--sm" style="--chip-color:#F1E05A;--chip-bg:rgba(241,224,90,0.16);--chip-border:rgba(241,224,90,0.45);--chip-glow:rgba(241,224,90,0.55)"><i class="devicon-javascript-plain chip__icon"></i>JavaScript</span>
+            <span class="chip chip--sm" style="--chip-color:#8892BF;--chip-bg:rgba(136,146,191,0.16);--chip-border:rgba(136,146,191,0.45);--chip-glow:rgba(136,146,191,0.55)"><i class="devicon-php-plain chip__icon"></i>PHP</span>
+            <span class="chip chip--sm" style="--chip-color:#00A8CC;--chip-bg:rgba(0,168,204,0.16);--chip-border:rgba(0,168,204,0.45);--chip-glow:rgba(0,168,204,0.55)"><i class="devicon-mysql-plain chip__icon"></i>MySQL</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#">Live Demo →</a>
+            <a href="#">Source Code →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__media">
+          <span class="project-card__index">03</span>
+        </div>
+        <div class="project-card__body">
+          <h3>Machine Learning Project</h3>
+          <p>One or two sentences describing your completed ML project and
+            the results it achieved.</p>
+          <div class="chips">
+            <span class="chip chip--sm" style="--chip-color:#4B8BBE;--chip-bg:rgba(75,139,190,0.16);--chip-border:rgba(75,139,190,0.45);--chip-glow:rgba(75,139,190,0.55)"><i class="devicon-python-plain chip__icon"></i>Python</span>
+            <span class="chip chip--sm" style="--chip-color:#FF6F61;--chip-bg:rgba(255,111,97,0.16);--chip-border:rgba(255,111,97,0.45);--chip-glow:rgba(255,111,97,0.55)">Machine Learning</span>
+          </div>
+          <div class="project-card__links">
+            <a href="#">Live Demo →</a>
+            <a href="#">Source Code →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section section--contact">
+  <div class="section__inner">
+    <h2 class="section__title">Let's Build <span style="color:#34D399">Something</span></h2>
+    <!-- EDIT: replace with your own closing line -->
+    <p class="contact__desc">
+      Open to full-stack &amp; .NET development roles. Feel free to reach out —
+      I usually reply within a day.
+    </p>
+
+    <!-- EDIT: replace with your real email and phone number -->
+    <div class="contact__primary">
+      <a href="mailto:shakib.mozumder@example.com" class="contact-email-card">
+        <span class="contact-email-card__icon"><i class="fa-solid fa-envelope"></i></span>
+        <span class="contact-email-card__text">
+          <span class="contact-email-card__label">Email me directly</span>
+          <span class="contact-email-card__value">shakib.mozumder@example.com</span>
+        </span>
+        <span class="contact-email-card__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a href="tel:+8801XXXXXXXXX" class="contact-email-card contact-email-card--phone">
+        <span class="contact-email-card__icon"><i class="fa-solid fa-phone"></i></span>
+        <span class="contact-email-card__text">
+          <span class="contact-email-card__label">Call me directly</span>
+          <span class="contact-email-card__value">+880 1XXX-XXXXXX</span>
+        </span>
+        <span class="contact-email-card__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </div>
+
+    <!-- EDIT: replace all href values with your real profile links -->
+    <div class="contact__grid">
+      <a href="https://github.com/your-username" class="contact-card" style="--card-color:#E5E7EB;--card-glow:rgba(229,231,235,0.45)">
+        <span class="contact-card__icon"><i class="fa-brands fa-github"></i></span>
+        <span class="contact-card__label">GitHub</span>
+      </a>
+      <a href="https://linkedin.com/in/your-linkedin" class="contact-card" style="--card-color:#0A66C2;--card-glow:rgba(10,102,194,0.45)">
+        <span class="contact-card__icon"><i class="fa-brands fa-linkedin-in"></i></span>
+        <span class="contact-card__label">LinkedIn</span>
+      </a>
+      <a href="https://twitter.com/your-twitter" class="contact-card" style="--card-color:#1DA1F2;--card-glow:rgba(29,161,242,0.45)">
+        <span class="contact-card__icon"><i class="fa-brands fa-x-twitter"></i></span>
+        <span class="contact-card__label">Twitter / X</span>
+      </a>
+      <a href="https://facebook.com/your-username" class="contact-card" style="--card-color:#1877F2;--card-glow:rgba(24,119,242,0.45)">
+        <span class="contact-card__icon"><i class="fa-brands fa-facebook-f"></i></span>
+        <span class="contact-card__label">Facebook</span>
+      </a>
+      <a href="https://instagram.com/your-username" class="contact-card contact-card--instagram" style="--card-color:#E1306C;--card-glow:rgba(225,48,108,0.45)">
+        <span class="contact-card__icon"><i class="fa-brands fa-instagram"></i></span>
+        <span class="contact-card__label">Instagram</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <button class="footer__top" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <nav class="footer__nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- EDIT: replace # with your real profile links -->
+    <div class="footer__social">
+      <a href="#" aria-label="GitHub" style="--icon-color:#E5E7EB"><i class="fa-brands fa-github"></i></a>
+      <a href="#" aria-label="LinkedIn" style="--icon-color:#0A66C2"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Twitter / X" style="--icon-color:#1DA1F2"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="Facebook" style="--icon-color:#1877F2"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram" style="--icon-color:#E1306C"><i class="fa-brands fa-instagram"></i></a>
+      <a href="mailto:shakib.mozumder@example.com" aria-label="Email" style="--icon-color:#EA4335"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <!-- EDIT: replace with your name -->
+    <p class="footer__copy">© <span id="year"></span> Shakib Mozumder. Built with HTML, CSS &amp; JavaScript.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
